@@ -57,6 +57,7 @@ function renderAvatar(user) {
     // 2 头像
     if (user.user_pic) {
         $('.layui-nav-img').show().attr('src', user.user_pic).siblings('.text-avatar').hide();
+    } else {
+        $('.text-avatar').show().html(name[0].toUpperCase()).siblings('.layui-nav-img').hide();
     }
-    $('.text-avatar').show().html(name[0].toUpperCase()).siblings('.layui-nav-img').hide();
 }
